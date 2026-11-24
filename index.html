@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hours Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>Hours Tracker</h1>
+
+  <div class="card">
+    <h2>Period</h2>
+    <div class="grid" id="controls"></div>
+    <div class="muted" id="payoutLine" style="margin-top:10px"></div>
+  </div>
+
+  <div class="card">
+    <h2>Pay rates and bonuses</h2>
+    <div class="grid" id="rates"></div>
+    <div class="muted" style="margin-top:10px">
+      Per-day rates set in the table override the rates above for that day. The night bonus is added on top of the base rate for each night hour you enter.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Summary</h2>
+    <div id="summaryBody"></div>
+  </div>
+
+  <div class="card">
+    <h2>Daily log</h2>
+    <div style="overflow-x:auto">
+      <table>
+        <thead><tr id="thead"></tr></thead>
+        <tbody id="tbody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">Entries are saved in this browser only. Export a CSV now and then as a backup.</div>
+  <div class="actions">
+    <button id="export">Export CSV</button>
+    <button id="reset">Reset all</button>
+  </div>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
